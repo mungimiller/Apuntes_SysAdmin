@@ -1,5 +1,5 @@
 
-# Guía de Docker para SysAdmins en CDmon
+# Guía de Docker para SysAdmin
 
 Esta guía cubre los fundamentos y herramientas esenciales para trabajar con Docker como un profesional del departamento de sistemas.
 
