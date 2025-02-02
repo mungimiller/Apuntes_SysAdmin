@@ -1,4 +1,4 @@
-# 🚀 50 Funcionalidades Útiles en .htaccess para Gestionar tu Web
+# 🚀 Funcionalidades de .htaccess 
 
 Este documento resume **50 funcionalidades** y ejemplos de código que puedes aplicar en tu archivo `.htaccess` para mejorar la seguridad, el rendimiento y la administración de tu sitio web.
 
