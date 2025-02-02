@@ -26,11 +26,11 @@ sudo apt-get update && sudo apt-get upgrade -y
 sudo apt-get install postfix -y
 ```
 Durante la instalación se te preguntará por el tipo de configuración. Selecciona "Sitio de Internet" (Internet Site).
-Introduce tu dominio (ej. example.com) cuando se solicite.
+- Introduce tu dominio (ej. example.com) cuando se solicite.
 
 ## 3. Configuración Básica de Postfix
 ### 3.1 Configurar el Archivo main.cf
-Edita el archivo /etc/postfix/main.cf para definir los parámetros básicos. Por ejemplo:
+- Edita el archivo /etc/postfix/main.cf para definir los parámetros básicos. Por ejemplo:
 ```
 # Nombre del host del servidor
 myhostname = mail.example.com
@@ -62,17 +62,16 @@ El archivo /etc/postfix/master.cf define los servicios que Postfix ofrece. La co
 ### 4.1 Habilitar TLS/SSL
 Para asegurar la comunicación mediante conexiones cifradas:
 
-Generar certificados (opcional – autofirmado o usar Let's Encrypt):
+- Generar certificados (opcional – autofirmado o usar Let's Encrypt):
 
-Generación de certificados autofirmados:
+  - Generación de certificados autofirmados:
 
 ```
 sudo openssl req -new -x509 -days 365 -nodes -out /etc/ssl/certs/postfix.pem -keyout /etc/ssl/private/postfix.key
 sudo chmod 600 /etc/ssl/private/postfix.key
 ```
-Configurar TLS en main.cf:
-
-Añade estas líneas:
+- Configurar TLS en main.cf:
+  Añade estas líneas:
 
 ```
 smtpd_tls_cert_file = /etc/ssl/certs/postfix.pem
@@ -89,9 +88,9 @@ Instalar módulos SASL:
 ```
 sudo apt-get install libsasl2-modules -y
 ```
-Configurar Postfix para usar SASL:
+- Configurar Postfix para usar SASL:
 
-En main.cf añade:
+- En main.cf añade:
 ```
 smtpd_sasl_auth_enable = yes
 smtpd_sasl_security_options = noanonymous
@@ -99,13 +98,13 @@ smtpd_sasl_local_domain = $myhostname
 broken_sasl_auth_clients = yes
 smtpd_recipient_restrictions = permit_sasl_authenticated, permit_mynetworks, reject_unauth_destination
 ```
-Configurar Cyrus SASL:
-Crea (o edita) el archivo /etc/postfix/sasl/smtpd.conf con el siguiente contenido:
+- Configurar Cyrus SASL:
+  Crea (o edita) el archivo /etc/postfix/sasl/smtpd.conf con el siguiente contenido:
 ```
 pwcheck_method: saslauthd
 mech_list: PLAIN LOGIN
 ```
-Inicia el servicio SASL:
+- Inicia el servicio SASL:
 ```
 sudo service saslauthd start
 ```
