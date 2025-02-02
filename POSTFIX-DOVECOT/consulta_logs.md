@@ -7,203 +7,172 @@ Los logs de Dovecot pueden almacenarse en diferentes archivos, dependiendo de la
 
 📌 Principales archivos de logs:
 
-📨 /var/log/mail.log → Registro global de correo (Dovecot, Postfix, etc.)
-📄 /var/log/dovecot.log → Logs exclusivos de Dovecot
-🔎 /var/log/dovecot-info.log → Eventos informativos (logins, correos movidos)
-⚠️ /var/log/dovecot-debug.log → Logs en modo depuración
-✉️ /var/log/dovecot-sieve.log → Registros de filtros Sieve (si están activados)
+- 📨 /var/log/mail.log → Registro global de correo (Dovecot, Postfix, etc.)
+- 📄 /var/log/dovecot.log → Logs exclusivos de Dovecot
+- 🔎 /var/log/dovecot-info.log → Eventos informativos (logins, correos movidos)
+- ⚠️ /var/log/dovecot-debug.log → Logs en modo depuración
+- ✉️ /var/log/dovecot-sieve.log → Registros de filtros Sieve (si están activados)
 📌 Verificar si los logs están activados:
 Si los archivos de logs no existen, revisa la configuración en:
-📁 /etc/dovecot/conf.d/10-logging.conf
-
-ini
-Copiar
-Editar
-log_path = /var/log/dovecot.log
-auth_verbose = yes
-auth_debug = yes
-auth_debug_passwords = no
+- 📁 /etc/dovecot/conf.d/10-logging.conf
+  ```
+  log_path = /var/log/dovecot.log
+  auth_verbose = yes
+  auth_debug = yes
+  auth_debug_passwords = no
+  ```
 📌 Esto garantiza que se almacenen registros detallados de la actividad de Dovecot.
 
 📜 2. Estructura de los Logs de Dovecot 🧐
 Un log de Dovecot típico sigue la siguiente estructura:
-
-log
-Copiar
-Editar
+```
 Feb 02 12:34:56 server dovecot: imap(user@example.com): Logged in
 Feb 02 12:35:10 server dovecot: imap(user@example.com): Disconnected: Logged out
 Feb 02 12:40:20 server dovecot: auth-worker(1234): sql(user@example.com): Password mismatch
 Feb 02 12:42:50 server dovecot: imap(user@example.com): Move: INBOX -> Trash
+```
 📌 Explicación de cada parte del log:
 
-🔢 Posición	📝 Descripción
-🕒 Fecha y hora	Feb 02 12:34:56 → Cuándo ocurrió el evento
-🖥️ Nombre del servidor	server → Servidor donde ocurrió el evento
-📌 Proceso involucrado	dovecot: imap → Servicio afectado (imap, pop3, auth, lmtp, etc.)
-👤 Usuario afectado	(user@example.com) → Cuenta de correo en cuestión
-🔍 Mensaje del evento	Logged in, Disconnected, Password mismatch, Move: INBOX -> Trash
+- 🔢 Posición	📝 Descripción
+- 🕒 Fecha y hora	Feb 02 12:34:56 → Cuándo ocurrió el evento
+- 🖥️ Nombre del servidor	server → Servidor donde ocurrió el evento
+- 📌 Proceso involucrado	dovecot: imap → Servicio afectado (imap, pop3, auth, lmtp, etc.)
+- 👤 Usuario afectado	(user@example.com) → Cuenta de correo en cuestión
+- 🔍 Mensaje del evento	Logged in, Disconnected, Password mismatch, Move: INBOX -> Trash
 📌 Cada log muestra una acción específica del servicio, lo que facilita su interpretación.
 
 🔍 3. Cómo Buscar Eventos Específicos en los Logs 🔎
 Puedes filtrar los logs para encontrar información clave con los siguientes comandos:
 
 🟢 Ver intentos de login exitosos
-bash
-Copiar
-Editar
+```
 grep "Logged in" /var/log/dovecot.log
+```
 📌 Muestra los usuarios que iniciaron sesión con éxito.
 
 🔴 Ver intentos de autenticación fallidos (contraseña incorrecta)
-bash
-Copiar
-Editar
+```
 grep "Password mismatch" /var/log/dovecot.log
+```
 📌 Muestra intentos de acceso fallidos por contraseña incorrecta.
 
 🗑️ Ver correos eliminados o movidos a la papelera
-bash
-Copiar
-Editar
+```
 grep "Move: .* -> Trash" /var/log/dovecot.log
+```
 📌 Muestra cuándo y quién movió correos a la papelera.
 
 📂 Ver correos movidos entre carpetas
-bash
-Copiar
-Editar
+```
 grep "Move:" /var/log/dovecot.log
+```
 📌 Registra cuándo un usuario movió correos de una carpeta a otra.
 
 🌍 Ver direcciones IP de los intentos de acceso
-bash
-Copiar
-Editar
+```
 grep "rip=" /var/log/dovecot.log
+```
 📌 Lista las direcciones IP desde donde se realizaron intentos de conexión.
 
 ⚠️ Ver errores de IMAP o POP3
-bash
-Copiar
-Editar
+```
 grep "Error:" /var/log/dovecot.log
+```
 📌 Filtra errores relacionados con el acceso IMAP/POP3.
 
 🚨 4. Interpretación de Errores Comunes y Soluciones 🛠️
 Aquí tienes algunos mensajes de error frecuentes y cómo solucionarlos:
 
 ❌ Fallo de autenticación
-log
-Copiar
-Editar
+```
 dovecot: auth: Failed password for user@example.com from 192.168.1.1
+```
 🔹 Causa: Contraseña incorrecta o usuario inexistente
 🔹 Solución: Verificar credenciales con:
-
-bash
-Copiar
-Editar
+```
 doveadm auth test user@example.com
+```
 ❌ Permisos incorrectos en Maildir
-log
-Copiar
-Editar
+```
 dovecot: imap(user@example.com): Error: Mail access failed: Permission denied
+```
 🔹 Causa: Problemas de permisos en /var/mail/vhosts/
 🔹 Solución: Corregir permisos con:
-
-bash
-Copiar
-Editar
+```
 chown -R vmail:vmail /var/mail/vhosts
 chmod -R 700 /var/mail/vhosts
+```
 ❌ Problema con certificados SSL
-log
-Copiar
-Editar
+```
 dovecot: imap-login: Disconnected (auth failed, TLS handshaking failed): user=<user@example.com>, rip=192.168.1.1
+```
 🔹 Causa: Certificado SSL inválido o expirado
 🔹 Solución: Renovar SSL con:
-
-bash
-Copiar
-Editar
-certbot renew --quiet
-systemctl restart dovecot
+  ```
+  certbot renew --quiet
+  systemctl restart dovecot
+  ```
 ❌ Intentos de fuerza bruta detectados
-log
-Copiar
-Editar
+```
 dovecot: auth-worker(1234): Warning: Brute-force attempt detected from 192.168.1.1
+```
 🔹 Causa: Ataques de fuerza bruta en el login
 🔹 Solución: Bloquear IP sospechosa con Fail2Ban:
-
-bash
-Copiar
-Editar
-fail2ban-client set dovecot banip 192.168.1.1
+  ```
+  fail2ban-client set dovecot banip 192.168.1.1
+  ```
 🎯 5. Configurar Logs Detallados para Mayor Análisis 🛠️
 Si necesitas registros más detallados, activa el modo verbose logging en /etc/dovecot/conf.d/10-logging.conf:
-
-ini
-Copiar
-Editar
+```
 log_path = /var/log/dovecot.log
 auth_verbose = yes
 auth_debug = yes
 auth_debug_passwords = no
 mail_debug = yes
+```
 📌 Esto aumentará la cantidad de información almacenada en los logs para un análisis más profundo.
 
-✅ 6. Conclusión: Control Total Sobre los Logs de Dovecot 🎯
-🔹 Dovecot almacena registros en /var/log/dovecot.log y /var/log/mail.log.
-🔹 Los logs muestran logins, correos movidos, intentos fallidos y errores.
-🔹 Puedes filtrar logs con grep para encontrar eventos clave.
-🔹 Errores comunes incluyen fallos de autenticación, problemas de permisos y SSL expirado.
-🔹 Habilitar logs detallados permite una mejor depuración y seguridad.
 
 # 📜 Logs de Postfix: Estructura, Análisis y Extracción de Información
 Postfix, al ser un servidor de correo, genera registros (logs) muy útiles para diagnosticar problemas, optimizar la entrega de correos y monitorear la actividad. A continuación, se detalla cómo interpretar cada parte de estos logs y cómo extraer información relevante.
 
 1. Ubicación de los Logs 📁
 Principales archivos:
-📨 Debian/Ubuntu: /var/log/mail.log
-📄 CentOS/Fedora: /var/log/maillog
+- 📨 Debian/Ubuntu: /var/log/mail.log
+- 📄 CentOS/Fedora: /var/log/maillog
 Notas adicionales:
 La ubicación puede variar según la configuración de syslog/rsyslog. Revisa los archivos de configuración (por ejemplo, /etc/rsyslog.conf) para confirmar dónde se almacenan.
+
 2. Estructura de un Log de Postfix 📜
 Un registro típico de Postfix suele tener el siguiente formato:
-
-log
-Copiar
+```
 Feb 02 12:34:56 server postfix/smtp[12345]: ABCDE12345: to=<recipient@example.com>, relay=mail.example.com[192.168.1.1]:25, delay=0.75, delays=0.1/0/0.4/0.25, dsn=2.0.0, status=sent (250 OK)
+```
 Desglose de cada apartado:
-🕒 Fecha y Hora:
+- 🕒 Fecha y Hora:
+    - Ejemplo: Feb 02 12:34:56
+    - Significado: Momento exacto en que se registró el evento.
 
-Ejemplo: Feb 02 12:34:56
-Significado: Momento exacto en que se registró el evento.
-🖥 Nombre del Servidor:
+- 🖥 Nombre del Servidor:
+  - Ejemplo: server
+  - Significado: Hostname del equipo que generó el log.
 
-Ejemplo: server
-Significado: Hostname del equipo que generó el log.
-🔍 Proceso y PID:
+- 🔍 Proceso y PID:
+  - Ejemplo: postfix/smtp[12345]
+  - Significado: Indica el subproceso de Postfix involucrado (como smtp, smtpd, pickup, etc.) y su ID de proceso (PID).
 
-Ejemplo: postfix/smtp[12345]
-Significado: Indica el subproceso de Postfix involucrado (como smtp, smtpd, pickup, etc.) y su ID de proceso (PID).
-🔖 Queue ID:
-
-Ejemplo: ABCDE12345
-Significado: Identificador único asignado al mensaje dentro de la cola de Postfix, útil para rastrear su recorrido.
-📝 Detalles del Mensaje:
+- 🔖 Queue ID:
+  - Ejemplo: ABCDE12345
+  - Significado: Identificador único asignado al mensaje dentro de la cola de Postfix, útil para rastrear su recorrido.
+    
+- 📝 Detalles del Mensaje:
 Estos campos ofrecen información específica sobre el manejo del correo:
-
-to=
-Ejemplo: to=<recipient@example.com>
-Significado: Dirección del destinatario.
-relay=
-Ejemplo: relay=mail.example.com[192.168.1.1]:25
-Significado: Servidor relay utilizado para la entrega, su IP y puerto.
+- `to=`
+  - Ejemplo: to=<recipient@example.com>
+  - Significado: Dirección del destinatario.
+- `relay=`
+  - Ejemplo: relay=mail.example.com[192.168.1.1]:25
+  - Significado: Servidor relay utilizado para la entrega, su IP y puerto.
 delay= y delays=
 Ejemplo: delay=0.75, delays=0.1/0/0.4/0.25
 Significado:
