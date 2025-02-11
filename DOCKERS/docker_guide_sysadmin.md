@@ -168,7 +168,3 @@ Los volúmenes permiten persistir datos entre reinicios de contenedores.
 ## **10. Recursos adicionales**
 - Documentación oficial: [https://docs.docker.com](https://docs.docker.com)
 - Curso gratuito de Docker: [https://katacoda.com](https://katacoda.com)
-
----
-
-Con esta guía estarás preparado para utilizar Docker en tareas de SysAdmin en CDmon. Si necesitas más ejemplos prácticos o ejercicios, no dudes en consultarlos.
