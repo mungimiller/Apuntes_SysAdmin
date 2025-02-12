@@ -1,4 +1,4 @@
-# 📌 SysAdmin Alejandro Mungi
+# 📌 Alejandro Mungi
 
 Bienvenido a **Apuntes SysAdmin**, un repositorio donde recopilo conocimientos, configuraciones y trucos útiles para administrar sistemas.
 
