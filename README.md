@@ -1,5 +1,3 @@
-# 📌 Alejandro Mungi
-
 Bienvenido a **Apuntes SysAdmin**, un repositorio donde recopilo conocimientos, configuraciones y trucos útiles que he ido necesitando para Administrar Sistemas Linux.
 
 ## 📖 Contenido
