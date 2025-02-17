@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/3039975c-108a-440e-8abb-a2fb11bd6858)
+
 
 Bienvenido a **Apuntes SysAdmin**, un repositorio donde recopilo conocimientos, configuraciones y trucos útiles que he ido necesitando para Administrar Sistemas Linux.
 
