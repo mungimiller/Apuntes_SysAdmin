@@ -15,7 +15,7 @@ Bienvenido a **Apuntes SysAdmin**, un repositorio donde recopilo conocimientos, 
 
 ---
 
-## 🛠 Conceptos Básicos
+## 🛠 Conceptos LAMP
 Aquí encontrarás información sobre comandos esenciales, estructura de archivos en Linux, gestión de usuarios y permisos.
 
 ## ⚙️ Configuraciones Avanzadas
