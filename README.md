@@ -1,4 +1,4 @@
-
+![DALL·E 2025-02-17 21 19 40 - A banner with a theme centered around cybersecurity  The design includes a dark, hacker-style aesthetic with a green and black color scheme, digital c](https://github.com/user-attachments/assets/ca521e3b-6519-4a90-b6de-9dfd642d65c2)
 
 Bienvenido a **Apuntes SysAdmin**, un repositorio donde recopilo conocimientos, configuraciones y trucos útiles que he ido necesitando para Administrar Sistemas Linux.
 
