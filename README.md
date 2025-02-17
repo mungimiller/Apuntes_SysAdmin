@@ -3,8 +3,7 @@
 Bienvenido a **Apuntes SysAdmin**, un repositorio donde recopilo conocimientos, configuraciones y trucos útiles que he ido necesitando para Administrar Sistemas Linux.
 
 ## 📖 Contenido
-https://github.com/mungimiller/Apuntes_SysAdmin/tree/main/DOCKERS
-🔹 [Ver apuntes de FIREWALL](https://github.com/mungimiller/Apuntes_SysAdmin/tree/main/FIREWALL) 
+🔹 [Ver apuntes de FIREWALL](https://github.com/mungimiller/Apuntes_SysAdmin/tree/main/FIREWALL)
 🔹 [Configuraciones avanzadas](#configuraciones-avanzadas)  
 🔹 [Scripts útiles](#scripts-%C3%BAtiles)  
 🔹 [Seguridad y buenas prácticas](#seguridad-y-buenas-pr%C3%A1cticas)  
