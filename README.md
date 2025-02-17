@@ -5,7 +5,7 @@ Bienvenido a **Apuntes SysAdmin**, un repositorio donde recopilo conocimientos, 
 ## 📖 Contenido
 🔹 [![Ir a FIREWALL](https://img.shields.io/badge/📂%20FIREWALL-blue?style=for-the-badge)](https://github.com/mungimiller/Apuntes_SysAdmin/tree/main/FIREWALL)
 
-🔹 [Configuraciones avanzadas](#configuraciones-avanzadas)  
+🔹 [![Ir a WORDPRESS](https://img.shields.io/badge/📂%20WORDPRESS-blue?style=for-the-badge)](https://github.com/mungimiller/Apuntes_SysAdmin/tree/main/WORDPRESS)
 🔹 [Scripts útiles](#scripts-%C3%BAtiles)  
 🔹 [Seguridad y buenas prácticas](#seguridad-y-buenas-pr%C3%A1cticas)  
 🔹 [Herramientas recomendadas](#herramientas-recomendadas)
