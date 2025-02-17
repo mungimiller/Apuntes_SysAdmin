@@ -30,8 +30,15 @@ Medidas de seguridad, hardening y protección contra ataques comunes.
 ## 🔧 Herramientas Recomendadas
 Listado de herramientas esenciales para la administración de sistemas y monitorización.
 
+
 ---
 
 📌 **Sigue el repo para más actualizaciones y contribuciones.**
 
 ✉️ *Si tienes sugerencias o mejoras, abre un issue o haz un pull request.*
+
+
+
+
+
+![Hecho con ❤️](https://img.shields.io/badge/made%20with-%E2%9D%A4-red)
