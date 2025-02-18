@@ -6,14 +6,14 @@
 Su arquitectura se basa en varios componentes clave:
 
 ## 1. Tablas y Cadenas
-- **Tablas**: IPTABLES organiza sus reglas en diferentes tablas, cada una diseñada para tareas específicas:
+- 📑 **Tablas**: IPTABLES organiza sus reglas en diferentes tablas, cada una diseñada para tareas específicas:
 
   - `filter`: Es la tabla por defecto y se encarga de filtrar el tráfico. Contiene las cadenas INPUT (paquetes entrantes), OUTPUT (paquetes salientes) y FORWARD (paquetes que pasan a través del equipo).
   - `nat`: Se utiliza para la traducción de direcciones (Network Address Translation). Posee cadenas como PREROUTING (antes de que se determine el destino del paquete) y POSTROUTING (después de que se ha   determinado el destino).
   - `mangle`: Permite modificar o marcar paquetes para su procesamiento posterior. Se usa en situaciones avanzadas como la configuración de calidad de servicio (QoS).
   - `raw y security`: Son menos utilizadas, pero permiten configuraciones específicas, como excepciones a la conexión tracking o políticas de seguridad más finas.
 
-- **Cadenas y Reglas**:
+- ⛓️ **Cadenas y Reglas**:
 Las reglas se agrupan en cadenas dentro de cada tabla. Cada regla tiene dos partes principales:
 
   - **Condiciones (matches)**: Se definen utilizando módulos (como `state`, `conntrack`, `multiport`, etc.) que permiten evaluar atributos del paquete (dirección IP, puerto, protocolo, etc.).
