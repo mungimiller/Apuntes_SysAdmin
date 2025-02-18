@@ -1,7 +1,9 @@
+# **¿Cómo Funciona IPTABLES?**
+**IPTABLES** es una herramienta que forma parte del framework Netfilter del kernel de Linux. Su función principal es el filtrado y manipulación de paquetes de red en tiempo real
+
 ![image](https://github.com/user-attachments/assets/116d0272-e661-4bfb-8979-c1ee6ac20fca)
 
-# **¿Cómo Funciona IPTABLES?**
-**IPTABLES** es una herramienta que forma parte del framework Netfilter del kernel de Linux. Su función principal es el filtrado y manipulación de paquetes de red en tiempo real. Su arquitectura se basa en varios componentes clave:
+Su arquitectura se basa en varios componentes clave:
 
 ## 1. Tablas y Cadenas
 - **Tablas**: IPTABLES organiza sus reglas en diferentes tablas, cada una diseñada para tareas específicas:
