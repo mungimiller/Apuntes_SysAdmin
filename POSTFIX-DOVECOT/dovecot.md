@@ -2,6 +2,7 @@
 Aquí tienes un resumen visual de la instalación y configuración completa de Dovecot en un servidor LAMP con iconos y pasos organizados de manera clara:
 
 📩 Instalación y Configuración de Dovecot en un Servidor LAMP
+
 🔹 1. Instalación de Dovecot
 ```
 sudo apt update && sudo apt install dovecot-core dovecot-imapd dovecot-pop3d
