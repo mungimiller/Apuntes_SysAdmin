@@ -34,32 +34,32 @@ sudo systemctl start iptables
 Una vez instalado, la configuración se realiza mediante la adición o eliminación de reglas. Algunas reglas básicas incluyen:
 
 Permitir conexiones ya establecidas:
-bash
-Copiar
+```
 iptables -A INPUT -m state --state ESTABLISHED,RELATED -j ACCEPT
+```
 Permitir conexiones SSH:
-bash
-Copiar
+```
 iptables -A INPUT -p tcp --dport 22 -j ACCEPT
+```
 Bloquear todo lo demás:
-bash
-Copiar
+```
 iptables -A INPUT -j DROP
-Comandos Avanzados de IPTABLES
+```
+
+## Comandos Avanzados de IPTABLES
 Aquí tienes una lista de 30 comandos avanzados junto con una breve descripción de cada uno:
 
 Listar reglas activas con detalles:
-
-bash
-Copiar
+```
 iptables -L -n -v
+```
+
 Muestra todas las reglas activas de forma numérica y con información detallada.
 
 Vaciar todas las reglas:
-
-bash
-Copiar
+```
 iptables -F
+```
 Elimina todas las reglas en todas las cadenas.
 
 Eliminar cadenas personalizadas:
