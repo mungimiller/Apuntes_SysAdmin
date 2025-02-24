@@ -4,7 +4,7 @@ Bienvenido a **Apuntes SysAdmin**, un repositorio donde recopilo conocimientos, 
 
 ## 📖 Contenido
 
-🔹 [![Ir a LAMP](https://img.shields.io/badge/📂%20LAMÑ-blue?style=for-the-badge)](https://github.com/mungimiller/Apuntes_SysAdmin/tree/main/LAMP)
+🔹 [![Ir a LAMP](https://img.shields.io/badge/📂%20LAMP-blue?style=for-the-badge)](https://github.com/mungimiller/Apuntes_SysAdmin/tree/main/LAMP)
 
 
 🔹 [![Ir a FIREWALL](https://img.shields.io/badge/📂%20FIREWALL-blue?style=for-the-badge)](https://github.com/mungimiller/Apuntes_SysAdmin/tree/main/FIREWALL)
