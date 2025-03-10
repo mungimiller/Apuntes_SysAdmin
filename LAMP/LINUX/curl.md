@@ -4,45 +4,51 @@
 
 A continuación se muestra un resumen detallado de las funciones y parámetros más importantes que puedes utilizar con el comando cURL. Ten en cuenta que cURL es muy versátil y soporta múltiples protocolos (HTTP, HTTPS, FTP, SFTP, LDAP, etc.), por lo que existen muchísimas opciones; este resumen abarca las funcionalidades más comunes y útiles, aunque para conocer la lista completa se recomienda revisar la documentación oficial de cURL.
 
-1. Uso Básico
+## 1. Uso Básico
 Sintaxis general:
-bash
-Copiar
+```
 curl [opciones] [URL...]
+```
 Ejemplo sencillo:
-bash
-Copiar
+```
 curl https://www.example.com
-2. Opciones Generales y de Visualización
-Ayuda y versión:
+```
+## 2. Opciones Generales y de Visualización
+### Ayuda y versión:
 
--h, --help
+- -h, --help
+  
 Muestra la ayuda y lista de opciones disponibles.
--V, --version
+- -V, --version
+  
 Muestra la versión de cURL y los protocolos soportados.
-Mensajes y depuración:
 
--v, --verbose
+### Mensajes y depuración:
+- -v, --verbose
+  
 Muestra información detallada del proceso de conexión y de la transferencia.
--s, --silent
+- -s, --silent
+  
 Ejecuta cURL en modo silencioso, sin mostrar la barra de progreso ni mensajes informativos.
--S, --show-error
+- -S, --show-error
+  
 Cuando se usa con -s, muestra los errores en caso de que ocurran.
--#
+- -#
 Muestra una barra de progreso en lugar de la salida por defecto.
-Ejemplo:
 
-bash
-Copiar
+Ejemplo:
+```
 curl -v https://www.example.com
+```
 3. Opciones de Conexión y Control de Red
 Redirecciones:
 
--L, --location
+- -L, --location
 Sigue automáticamente las redirecciones que devuelva el servidor.
---max-redirs <número>
+- --max-redirs <número>
 Limita el número de redirecciones a seguir.
-Tiempos de espera y velocidad:
+
+### Tiempos de espera y velocidad:
 
 --connect-timeout <segundos>
 Define el tiempo máximo para establecer la conexión.
