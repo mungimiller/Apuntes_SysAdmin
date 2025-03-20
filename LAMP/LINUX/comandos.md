@@ -1,4 +1,5 @@
-# COMANDOS LINUX
+![image](https://github.com/user-attachments/assets/2fc6768b-0b5a-49e4-88f1-4f4084d7e2f3)
+
 
 ## 📂 Manejo de Archivos y Directorios
 
