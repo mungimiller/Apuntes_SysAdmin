@@ -62,9 +62,9 @@
     Ejemplo: cat /etc/hosts<br>
     Notas: Útil para concatenar y visualizar archivos.
 
-    less
-    Descripción: Permite visualizar archivos largos página por página.
-    Ejemplo: less /var/log/syslog
+- `less`<br>
+    Descripción: Permite visualizar archivos largos página por página.<br>
+    Ejemplo: less /var/log/syslog<br>
     Notas: Mejor opción que more por sus funcionalidades.
 
     tail
