@@ -1,65 +1,65 @@
 # COMANDOS LINUX
 
-## 1. Manejo de Archivos y Directorios
+## 📂 Manejo de Archivos y Directorios
 
--  `ls`
-    Descripción: Lista el contenido de un directorio.
-    Ejemplo: ls -la /var/log
+-  `ls`<br>
+    Descripción: Lista el contenido de un directorio.<br>
+    Ejemplo: ls -la /var/log<br>
     Notas: Comando básico en cualquier distribución.
 
-- `cd`
-    Descripción: Cambia el directorio actual.
-    Ejemplo: cd /etc
+- `cd`<br>
+    Descripción: Cambia el directorio actual.<br>
+    Ejemplo: cd /etc<br>
     Notas: Esencial en cualquier shell.
 
-- `pwd`
-    Descripción: Muestra la ruta del directorio actual.
-    Ejemplo: pwd
+- `pwd`<br>
+    Descripción: Muestra la ruta del directorio actual.<br>
+    Ejemplo: pwd<br>
     Notas: Disponible en todas las distribuciones.
 
-- `mkdir`
-    Descripción: Crea un directorio nuevo.
-    Ejemplo: mkdir /tmp/nuevo_directorio
+- `mkdir`<br>
+    Descripción: Crea un directorio nuevo.<br>
+    Ejemplo: mkdir /tmp/nuevo_directorio<br>
     Notas: Útil para organizar archivos.
 
-- `rmdir`
-    Descripción: Elimina directorios vacíos.
-    Ejemplo: rmdir /tmp/nuevo_directorio
+- `rmdir`<br>
+    Descripción: Elimina directorios vacíos.<br>
+    Ejemplo: rmdir /tmp/nuevo_directorio<br>
     Notas: Si el directorio contiene archivos, se recomienda rm -r.
 
-- `cp`
-    Descripción: Copia archivos o directorios.
-    Ejemplo: cp archivo.txt /home/usuario/
+- `cp`<br>
+    Descripción: Copia archivos o directorios.<br>
+    Ejemplo: cp archivo.txt /home/usuario/<br>
     Notas: Con opción -r para directorios.
 
-- `mv`
-    Descripción: Mueve o renombra archivos y directorios.
-    Ejemplo: mv archivo.txt /home/usuario/documentos/
+- `mv`<br>
+    Descripción: Mueve o renombra archivos y directorios.<br>
+    Ejemplo: mv archivo.txt /home/usuario/documentos/<br>
     Notas: Disponible en todas las distribuciones.
 
-- `rm`
-    Descripción: Elimina archivos o directorios (con opción -r para recursividad).
-    Ejemplo: rm -rf /tmp/carpeta
+- `rm`<br>
+    Descripción: Elimina archivos o directorios (con opción -r para recursividad).<br>
+    Ejemplo: rm -rf /tmp/carpeta<br>
     Notas: Uso cuidadoso para evitar pérdidas accidentales.
 
-- `find`
-    Descripción: Busca archivos y directorios basándose en criterios.
-    Ejemplo: find /var -name "*.log"
+- `find`<br>
+    Descripción: Busca archivos y directorios basándose en criterios.<br>
+    Ejemplo: find /var -name "*.log"<br>
     Notas: Muy útil para búsquedas avanzadas.
 
-    locate
-    Descripción: Busca archivos rápidamente usando una base de datos actualizada.
-    Ejemplo: locate passwd
+- `locate`<br>
+    Descripción: Busca archivos rápidamente usando una base de datos actualizada.<br>
+    Ejemplo: locate passwd<br>
     Notas: Requiere actualizar la base de datos con updatedb.
 
-    updatedb
-    Descripción: Actualiza la base de datos para el comando locate.
-    Ejemplo: sudo updatedb
+- `updatedb`<br>
+    Descripción: Actualiza la base de datos para el comando locate.<br>
+    Ejemplo: sudo updatedb<br>
     Notas: Común en distribuciones con mlocate instalado.
 
-    cat
-    Descripción: Muestra el contenido de archivos en la salida estándar.
-    Ejemplo: cat /etc/hosts
+- `cat`<br>
+    Descripción: Muestra el contenido de archivos en la salida estándar.<br>
+    Ejemplo: cat /etc/hosts<br>
     Notas: Útil para concatenar y visualizar archivos.
 
     less
