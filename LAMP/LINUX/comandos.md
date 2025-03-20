@@ -68,243 +68,243 @@
     Ejemplo: less /var/log/syslog<br>
     Notas: Mejor opción que more por sus funcionalidades.
 
-    tail
-    Descripción: Muestra las últimas líneas de un archivo.
-    Ejemplo: tail -n 20 /var/log/syslog
+    tail<br>
+    Descripción: Muestra las últimas líneas de un archivo.<br>
+    Ejemplo: tail -n 20 /var/log/syslog<br>
     Notas: Ideal para ver logs en tiempo real con -f.
 
-    head
-    Descripción: Muestra las primeras líneas de un archivo.
-    Ejemplo: head -n 10 /var/log/syslog
+    head<br>
+    Descripción: Muestra las primeras líneas de un archivo.<br>
+    Ejemplo: head -n 10 /var/log/syslog<br>
     Notas: Funciona en cualquier distribución.
 
-    touch
-    Descripción: Crea archivos vacíos o actualiza la fecha de modificación.
-    Ejemplo: touch nuevo_archivo.txt
+    touch<br>
+    Descripción: Crea archivos vacíos o actualiza la fecha de modificación.<br>
+    Ejemplo: touch nuevo_archivo.txt<br>
     Notas: Fundamental para scripts y pruebas.
 
-    ln
-    Descripción: Crea enlaces duros o simbólicos entre archivos.
-    Ejemplo: ln -s /ruta/original /ruta/enlace
-    Notas: El uso de -s crea enlaces simbólicos; aplicable en cualquier entorno.
+    ln<br>
+    Descripción: Crea enlaces duros o simbólicos entre archivos.<br>
+    Ejemplo: ln -s /ruta/original /ruta/enlace<br>
+    Notas: El uso de -s crea enlaces simbólicos; aplicable en cualquier entorno.<br>
 
-    file
-    Descripción: Determina el tipo de un archivo.
-    Ejemplo: file /bin/ls
+    file<br>
+    Descripción: Determina el tipo de un archivo.<br>
+    Ejemplo: file /bin/ls<br>
     Notas: Útil para identificar archivos binarios, de texto, etc.
 
-    du
-    Descripción: Muestra el uso de disco de archivos y directorios.
-    Ejemplo: du -sh /home/usuario
+    du<br>
+    Descripción: Muestra el uso de disco de archivos y directorios.<br>
+    Ejemplo: du -sh /home/usuario<br>
     Notas: Disponible en todas las distribuciones.
 
-    df
-    Descripción: Informa sobre el espacio en disco de los sistemas de archivos montados.
-    Ejemplo: df -h
+    df<br>
+    Descripción: Informa sobre el espacio en disco de los sistemas de archivos montados.<br>
+    Ejemplo: df -h<br>
     Notas: Uso común en la monitorización de almacenamiento.
 
 2. Gestión de Procesos
 
-    ps
-    Descripción: Muestra procesos en ejecución.
-    Ejemplo: ps aux | grep apache
+    ps<br>
+    Descripción: Muestra procesos en ejecución.<br>
+    Ejemplo: ps aux | grep apache<br>
     Notas: Disponible en todas las distribuciones.
 
-    top
-    Descripción: Monitoriza procesos y recursos en tiempo real.
-    Ejemplo: top
+    top<br>
+    Descripción: Monitoriza procesos y recursos en tiempo real.<br>
+    Ejemplo: top<br>
     Notas: Incluido por defecto en la mayoría de distribuciones.
 
-    htop
-    Descripción: Versión interactiva y mejorada de top.
-    Ejemplo: htop
+    htop<br>
+    Descripción: Versión interactiva y mejorada de top.<br>
+    Ejemplo: htop<br>
     Notas: Puede requerir instalación en algunas distribuciones (por ejemplo, Ubuntu: sudo apt install htop).
 
-    kill
-    Descripción: Envía señales a procesos para finalizarlos.
-    Ejemplo: kill -9 1234
+    kill<br>
+    Descripción: Envía señales a procesos para finalizarlos.<br>
+    Ejemplo: kill -9 1234<br>
     Notas: Útil en cualquier entorno; la señal -9 es para forzar la terminación.
 
-    pkill
-    Descripción: Envía señales a procesos basándose en su nombre.
-    Ejemplo: pkill -f apache
+    pkill<br>
+    Descripción: Envía señales a procesos basándose en su nombre.<br>
+    Ejemplo: pkill -f apache<br>
     Notas: Alternativa a kill para procesos específicos.
 
-    killall
-    Descripción: Finaliza todos los procesos con un nombre dado.
-    Ejemplo: killall firefox
+    killall<br>
+    Descripción: Finaliza todos los procesos con un nombre dado.<br>
+    Ejemplo: killall firefox<br>
     Notas: Disponible en varias distribuciones, pero puede diferir entre sistemas UNIX.
 
-    bg
-    Descripción: Envía un proceso detenido al fondo (background).
-    Ejemplo: bg %1
+    bg<br>
+    Descripción: Envía un proceso detenido al fondo (background).<br>
+    Ejemplo: bg %1<br>
     Notas: Comando interno del shell.
 
-    fg
-    Descripción: Trae un proceso en segundo plano al primer plano.
-    Ejemplo: fg %1
+    fg<br>
+    Descripción: Trae un proceso en segundo plano al primer plano.<br>
+    Ejemplo: fg %1<br>
     Notas: Uso común en bash y otros shells.
 
-    nohup
-    Descripción: Ejecuta un comando ignorando la señal SIGHUP (ideal para procesos en background).
-    Ejemplo: nohup ./script.sh &
+    nohup<br>
+    Descripción: Ejecuta un comando ignorando la señal SIGHUP (ideal para procesos en background).<br>
+    Ejemplo: nohup ./script.sh &<br>
     Notas: Muy usado en entornos de servidor.
 
-    pstree
-    Descripción: Muestra la jerarquía de procesos en forma de árbol.
-    Ejemplo: pstree -p
+    pstree<br>
+    Descripción: Muestra la jerarquía de procesos en forma de árbol.<br>
+    Ejemplo: pstree -p<br>
     Notas: Puede requerir instalación en algunas distribuciones.
 
 3. Administración de Paquetes
 
-    apt-get
-    Descripción: Gestiona paquetes en distribuciones basadas en Debian/Ubuntu.
-    Ejemplo: sudo apt-get update && sudo apt-get upgrade
+    apt-get<br>
+    Descripción: Gestiona paquetes en distribuciones basadas en Debian/Ubuntu.<br>
+    Ejemplo: sudo apt-get update && sudo apt-get upgrade<br>
     Notas: Fundamental en Debian, Ubuntu y derivados.
 
-    aptitude
-    Descripción: Alternativa interactiva a apt-get en Debian/Ubuntu.
-    Ejemplo: sudo aptitude install nginx
+    aptitude<br>
+    Descripción: Alternativa interactiva a apt-get en Debian/Ubuntu.<br>
+    Ejemplo: sudo aptitude install nginx<br>
     Notas: Ofrece una interfaz de texto más amigable.
 
-    dpkg
-    Descripción: Herramienta de bajo nivel para gestionar paquetes .deb.
-    Ejemplo: sudo dpkg -i paquete.deb
+    dpkg<br>
+    Descripción: Herramienta de bajo nivel para gestionar paquetes .deb.<br>
+    Ejemplo: sudo dpkg -i paquete.deb<br>
     Notas: Utilizado en Debian/Ubuntu.
 
-    yum
-    Descripción: Gestor de paquetes para distribuciones basadas en RHEL/CentOS.
-    Ejemplo: sudo yum install httpd
+    yum<br>
+    Descripción: Gestor de paquetes para distribuciones basadas en RHEL/CentOS.<br>
+    Ejemplo: sudo yum install httpd<br>
     Notas: Reemplazado gradualmente por dnf en versiones más recientes.
 
-    dnf
-    Descripción: Gestor de paquetes moderno para Fedora, CentOS y RHEL.
-    Ejemplo: sudo dnf update
+    dnf<br>
+    Descripción: Gestor de paquetes moderno para Fedora, CentOS y RHEL.<br>
+    Ejemplo: sudo dnf update<br>
     Notas: Recomendado en sistemas modernos de Red Hat.
 
-    rpm
-    Descripción: Herramienta de bajo nivel para gestionar paquetes RPM.
-    Ejemplo: rpm -qa | grep httpd
+    rpm<br>
+    Descripción: Herramienta de bajo nivel para gestionar paquetes RPM.<br>
+    Ejemplo: rpm -qa | grep httpd<br>
     Notas: Utilizado en CentOS, Fedora, RHEL.
 
-    pacman
-    Descripción: Gestor de paquetes para Arch Linux y derivados.
-    Ejemplo: sudo pacman -Syu
+    pacman<br>
+    Descripción: Gestor de paquetes para Arch Linux y derivados.<br>
+    Ejemplo: sudo pacman -Syu<br>
     Notas: Específico de Arch y distribuciones basadas en este.
 
-    snap
-    Descripción: Sistema de paquetes universal para instalar aplicaciones en contenedores.
-    Ejemplo: sudo snap install postman
+    snap<br>
+    Descripción: Sistema de paquetes universal para instalar aplicaciones en contenedores<br>.
+    Ejemplo: sudo snap install postman<br>
     Notas: Disponible en Ubuntu y otras distribuciones compatibles.
 
 4. Gestión de Usuarios y Permisos
 
-    useradd
-    Descripción: Crea nuevos usuarios en el sistema.
-    Ejemplo: sudo useradd -m juan
+    useradd<br>
+    Descripción: Crea nuevos usuarios en el sistema.<br>
+    Ejemplo: sudo useradd -m juan<br>
     Notas: Común en cualquier distribución.
 
-    userdel
-    Descripción: Elimina un usuario.
-    Ejemplo: sudo userdel -r juan
+    userdel<br>
+    Descripción: Elimina un usuario.<br>
+    Ejemplo: sudo userdel -r juan<br>
     Notas: La opción -r elimina también el directorio home.
 
-    usermod
-    Descripción: Modifica la configuración de un usuario existente.
-    Ejemplo: sudo usermod -aG sudo juan
+    usermod<br>
+    Descripción: Modifica la configuración de un usuario existente<br>.
+    Ejemplo: sudo usermod -aG sudo juan<br>
     Notas: Útil para gestionar grupos y permisos.
 
-    passwd
-    Descripción: Cambia la contraseña de un usuario.
-    Ejemplo: sudo passwd juan
+    passwd<br>
+    Descripción: Cambia la contraseña de un usuario.<br>
+    Ejemplo: sudo passwd juan<br>
     Notas: Comando universal en Linux.
 
-    groupadd
-    Descripción: Crea un grupo nuevo.
-    Ejemplo: sudo groupadd desarrolladores
+    groupadd<br>
+    Descripción: Crea un grupo nuevo.<br>
+    Ejemplo: sudo groupadd desarrolladores<br>
     Notas: Usado en cualquier distribución.
 
-    groupdel
-    Descripción: Elimina un grupo.
-    Ejemplo: sudo groupdel desarrolladores
+    groupdel<br>
+    Descripción: Elimina un grupo.<br>
+    Ejemplo: sudo groupdel desarrolladores<br>
     Notas: Asegurarse de que no haya usuarios asignados.
 
-    chown
-    Descripción: Cambia el propietario y grupo de archivos y directorios.
-    Ejemplo: sudo chown juan:desarrolladores archivo.txt
+    chown<br>
+    Descripción: Cambia el propietario y grupo de archivos y directorios.<br>
+    Ejemplo: sudo chown juan:desarrolladores archivo.txt<br>
     Notas: Fundamental para la seguridad de archivos.
 
-    chmod
-    Descripción: Modifica los permisos de archivos y directorios.
-    Ejemplo: chmod 755 script.sh
+    chmod<br>
+    Descripción: Modifica los permisos de archivos y directorios.<br>
+    Ejemplo: chmod 755 script.sh<br>
     Notas: Utilizado en cualquier entorno UNIX.
 
-    su
-    Descripción: Cambia de usuario o ejecuta comandos como otro usuario.
-    Ejemplo: su - root
+    su<br>
+    Descripción: Cambia de usuario o ejecuta comandos como otro usuario.<br>
+    Ejemplo: su - root<br>
     Notas: Alternativa a sudo, aunque menos segura en algunos casos.
 
-    sudo
-    Descripción: Ejecuta comandos con privilegios de superusuario.
-    Ejemplo: sudo apt-get update
+    sudo<br>
+    Descripción: Ejecuta comandos con privilegios de superusuario.<br>
+    Ejemplo: sudo apt-get update<br>
     Notas: Muy utilizado en Ubuntu y otras distribuciones modernas.
 
 5. Monitorización del Sistema
 
-    free
-    Descripción: Muestra la memoria libre y usada.
-    Ejemplo: free -h
+    free<br>
+    Descripción: Muestra la memoria libre y usada.<br>
+    Ejemplo: free -h<br>
     Notas: Útil en cualquier distribución.
 
-    vmstat
-    Descripción: Informa sobre la memoria virtual, procesos y CPU.
-    Ejemplo: vmstat 2 5
+    vmstat<br>
+    Descripción: Informa sobre la memoria virtual, procesos y CPU<br>.
+    Ejemplo: vmstat 2 5<br>
     Notas: Herramienta clásica para diagnóstico de rendimiento.
 
-    iostat
-    Descripción: Proporciona estadísticas de entrada/salida y CPU.
-    Ejemplo: iostat -xz 2 3
+    iostat<br>
+    Descripción: Proporciona estadísticas de entrada/salida y CPU.<br>
+    Ejemplo: iostat -xz 2 3<br>
     Notas: Puede requerir instalación (por ejemplo, paquete sysstat).
 
-    sar
-    Descripción: Recolecta y reporta estadísticas del sistema.
-    Ejemplo: sar -u 1 3
+    sar<br>
+    Descripción: Recolecta y reporta estadísticas del sistema.<br>
+    Ejemplo: sar -u 1 3<br>
     Notas: Parte del paquete sysstat, muy útil en entornos de producción.
 
-    uptime
-    Descripción: Muestra el tiempo de actividad del sistema y carga media.
-    Ejemplo: uptime
+    uptime<br>
+    Descripción: Muestra el tiempo de actividad del sistema y carga media<br>.
+    Ejemplo: uptime<br>
     Notas: Información rápida sobre la estabilidad del sistema.
 
-    dmesg
-    Descripción: Visualiza mensajes del kernel, útil para diagnosticar problemas de hardware.
-    Ejemplo: dmesg | tail
+    dmesg<br>
+    Descripción: Visualiza mensajes del kernel, útil para diagnosticar problemas de hardware.<br>
+    Ejemplo: dmesg | tail<br>
     Notas: Común en todas las distribuciones.
 
-    systemctl status
-    Descripción: Muestra el estado de los servicios gestionados por systemd.
-    Ejemplo: systemctl status sshd
+    systemctl status<br>
+    Descripción: Muestra el estado de los servicios gestionados por systemd.<br>
+    Ejemplo: systemctl status sshd<br>
     Notas: Utilizado en distribuciones modernas (Ubuntu 16.04+, CentOS 7+).
 
-    journalctl
-    Descripción: Consulta los logs del sistema en entornos systemd.
-    Ejemplo: journalctl -u apache2
+    journalctl<br>
+    Descripción: Consulta los logs del sistema en entornos systemd.<br>
+    Ejemplo: journalctl -u apache2<br>
     Notas: Alternativa moderna al archivo /var/log/syslog.
 
-    netstat
-    Descripción: Muestra conexiones de red y estadísticas.
-    Ejemplo: netstat -tuln
+    netstat<br>
+    Descripción: Muestra conexiones de red y estadísticas.<br>
+    Ejemplo: netstat -tuln<br>
     Notas: Aunque está en desuso en favor de ss, sigue siendo útil en entornos legacy.
 
-    ss
-    Descripción: Reemplazo moderno de netstat para estadísticas de sockets.
-    Ejemplo: ss -tuln
+    ss<br>
+    Descripción: Reemplazo moderno de netstat para estadísticas de sockets.<br>
+    Ejemplo: ss -tuln<br>
     Notas: Mejor rendimiento y más opciones; disponible en distribuciones recientes.
 
 6. Red y Servicios
 
-    ifconfig / ip
-    Descripción: Configuran y muestran interfaces de red.
+    ifconfig / ip<br>
+    Descripción: Configuran y muestran interfaces de red.<br>
     Ejemplo:
         Con ifconfig: ifconfig eth0
         Con ip: ip addr show eth0
