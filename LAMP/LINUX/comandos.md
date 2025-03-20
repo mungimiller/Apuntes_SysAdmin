@@ -1,31 +1,31 @@
 1. Manejo de Archivos y Directorios
 
-    ls
+    `ls`
     Descripción: Lista el contenido de un directorio.
     Ejemplo: ls -la /var/log
     Notas: Comando básico en cualquier distribución.
 
-    cd
+    `cd`
     Descripción: Cambia el directorio actual.
     Ejemplo: cd /etc
     Notas: Esencial en cualquier shell.
 
-    pwd
+    `pwd`
     Descripción: Muestra la ruta del directorio actual.
     Ejemplo: pwd
     Notas: Disponible en todas las distribuciones.
 
-    mkdir
+    `mkdir`
     Descripción: Crea un directorio nuevo.
     Ejemplo: mkdir /tmp/nuevo_directorio
     Notas: Útil para organizar archivos.
 
-    rmdir
+    `rmdir`
     Descripción: Elimina directorios vacíos.
     Ejemplo: rmdir /tmp/nuevo_directorio
     Notas: Si el directorio contiene archivos, se recomienda rm -r.
 
-    cp
+    `cp`
     Descripción: Copia archivos o directorios.
     Ejemplo: cp archivo.txt /home/usuario/
     Notas: Con opción -r para directorios.
