@@ -1,46 +1,48 @@
-1. Manejo de Archivos y Directorios
+# COMANDOS LINUX
 
-    `ls`
+## 1. Manejo de Archivos y Directorios
+
+-  `ls`
     Descripción: Lista el contenido de un directorio.
     Ejemplo: ls -la /var/log
     Notas: Comando básico en cualquier distribución.
 
-    `cd`
+- `cd`
     Descripción: Cambia el directorio actual.
     Ejemplo: cd /etc
     Notas: Esencial en cualquier shell.
 
-    `pwd`
+- `pwd`
     Descripción: Muestra la ruta del directorio actual.
     Ejemplo: pwd
     Notas: Disponible en todas las distribuciones.
 
-    `mkdir`
+- `mkdir`
     Descripción: Crea un directorio nuevo.
     Ejemplo: mkdir /tmp/nuevo_directorio
     Notas: Útil para organizar archivos.
 
-    `rmdir`
+- `rmdir`
     Descripción: Elimina directorios vacíos.
     Ejemplo: rmdir /tmp/nuevo_directorio
     Notas: Si el directorio contiene archivos, se recomienda rm -r.
 
-    `cp`
+- `cp`
     Descripción: Copia archivos o directorios.
     Ejemplo: cp archivo.txt /home/usuario/
     Notas: Con opción -r para directorios.
 
-    mv
+- `mv`
     Descripción: Mueve o renombra archivos y directorios.
     Ejemplo: mv archivo.txt /home/usuario/documentos/
     Notas: Disponible en todas las distribuciones.
 
-    rm
+- `rm`
     Descripción: Elimina archivos o directorios (con opción -r para recursividad).
     Ejemplo: rm -rf /tmp/carpeta
     Notas: Uso cuidadoso para evitar pérdidas accidentales.
 
-    find
+- `find`
     Descripción: Busca archivos y directorios basándose en criterios.
     Ejemplo: find /var -name "*.log"
     Notas: Muy útil para búsquedas avanzadas.
