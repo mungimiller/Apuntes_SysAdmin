@@ -46,7 +46,7 @@ Bloquear todo lo demás:
 iptables -A INPUT -j DROP
 ```
 
-### 30 Configuraciones Avanzadas de IPTABLES
+### Configuraciones Avanzadas de IPTABLES
 
 1. **Política por Defecto Restringida**  
    - **Explicación:** Establece políticas por defecto de denegar el tráfico entrante y permitir el saliente, lo que fuerza a definir reglas explícitas para aceptar conexiones.  
@@ -285,7 +285,7 @@ iptables -A INPUT -j DROP
 
 ---
 
-### 30 Comandos Avanzados de IPTABLES en Entornos de Producción
+### Comandos Avanzados de IPTABLES en Entornos de Producción
 
 1. **Listar Reglas con Contadores y Detalles**  
    - **Explicación:** Visualiza todas las reglas activas con contadores de paquetes y bytes para análisis de tráfico.  
