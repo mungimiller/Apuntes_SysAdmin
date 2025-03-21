@@ -1,4 +1,4 @@
-# 30 Comandos Linux Revisar para COBOL
+6# 30 Comandos Linux Revisar para COBOL
 
 Estos comandos complementan el proceso de evaluación, conversión, adaptación, automatización y optimización, permitiéndote analizar de forma profesional aspectos críticos durante la migración de aplicaciones COBOL legadas con herramientas Micro Focus.
 
