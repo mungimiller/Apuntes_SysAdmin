@@ -1,4 +1,4 @@
-### 25 Configuraciones de Seguridad de Fail2ban
+### Configuraciones de Seguridad de Fail2ban
 
 1. **Jail para SSHD Avanzado**  
    - **Explicación:** Configuración avanzada para proteger el servicio SSH, con límites estrictos de reintentos y tiempos de baneo escalables.  
@@ -377,7 +377,7 @@
 
 ---
 
-### 25 Comandos de Fail2ban en Entornos de Producción
+### Comandos de Fail2ban en Entornos de Producción
 
 1. **Obtener Estado Global**  
    - **Explicación:** Muestra el estado global de fail2ban, listando todas las jails activas y estadísticas generales.  
