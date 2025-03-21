@@ -224,3 +224,206 @@
 50. **docker ps**  
     - **Explicación:** Lista contenedores Docker en ejecución con un formato personalizado, permitiendo filtrar por estado o nombre para facilitar la administración de entornos de contenedores en producción.  
     - **Ejemplo:** `docker ps --filter "status=running" --format "table {{.ID}}\t{{.Names}}\t{{.Status}}"`
+
+
+MAS EJEMPLOS:
+1. **watch**  
+   - **Explicación:** Ejecuta un comando de forma repetida a intervalos definidos para monitorear cambios en tiempo real, ideal para supervisar procesos o recursos.  
+   - **Ejemplo:** `watch -n 2 'ps -eo pid,cmd,%cpu --sort=-%cpu | head -n 10'`
+
+2. **lscpu**  
+   - **Explicación:** Muestra información detallada sobre la arquitectura de la CPU, útil para ajustar el rendimiento o solucionar problemas de compatibilidad.  
+   - **Ejemplo:** `lscpu`
+
+3. **lsblk**  
+   - **Explicación:** Lista dispositivos de bloques conectados y sus puntos de montaje, facilitando la gestión y diagnóstico de almacenamiento.  
+   - **Ejemplo:** `lsblk -o NAME,SIZE,TYPE,MOUNTPOINT`
+
+4. **df**  
+   - **Explicación:** Informa sobre el uso de espacio en disco de todas las particiones montadas, crucial para evitar quedadas de espacio.  
+   - **Ejemplo:** `df -h`
+
+5. **du**  
+   - **Explicación:** Calcula el uso de espacio de archivos y directorios de forma recursiva, permitiendo identificar rápidamente los grandes consumidores de disco.  
+   - **Ejemplo:** `du -sh /var/log/*`
+
+6. **dstat**  
+   - **Explicación:** Combina estadísticas de CPU, disco, red y más en tiempo real, facilitando un diagnóstico completo del sistema.  
+   - **Ejemplo:** `dstat -tcndy`
+
+7. **bmon**  
+   - **Explicación:** Monitorea el uso de ancho de banda en las interfaces de red con una interfaz visual en tiempo real.  
+   - **Ejemplo:** `bmon -p eth0`
+
+8. **sosreport**  
+   - **Explicación:** Recopila una amplia gama de datos del sistema (configuraciones, logs, estado de hardware) para diagnósticos y soporte avanzado.  
+   - **Ejemplo:** `sosreport --batch`
+
+9. **ipvsadm**  
+   - **Explicación:** Administra el IP Virtual Server para balanceo de carga, permitiendo ver y modificar las reglas de red en clústeres de alta disponibilidad.  
+   - **Ejemplo:** `ipvsadm -L -n`
+
+10. **fail2ban-regex**  
+    - **Explicación:** Permite probar las expresiones regulares usadas en las reglas de Fail2Ban contra logs reales para verificar su eficacia.  
+    - **Ejemplo:** `fail2ban-regex /var/log/auth.log /etc/fail2ban/filter.d/sshd.conf`
+
+11. **auditctl**  
+    - **Explicación:** Configura el sistema de auditoría de Linux para vigilar cambios críticos, asegurando la integridad de archivos importantes.  
+    - **Ejemplo:** `auditctl -w /etc/passwd -p wa -k passwd_changes`
+
+12. **ausearch**  
+    - **Explicación:** Busca y filtra eventos en los registros de auditoría, facilitando análisis forenses en incidentes de seguridad.  
+    - **Ejemplo:** `ausearch -k passwd_changes`
+
+13. **acct**  
+    - **Explicación:** Habilita la contabilidad de procesos para registrar el uso de recursos por usuario y comando, ayudando en auditorías y optimización.  
+    - **Ejemplo:** `sa -u`
+
+14. **mpstat**  
+    - **Explicación:** Proporciona estadísticas de CPU por cada procesador, ayudando a identificar desequilibrios en la carga de trabajo.  
+    - **Ejemplo:** `mpstat -P ALL 2 5`
+
+15. **numactl**  
+    - **Explicación:** Controla la asignación de memoria en sistemas NUMA para mejorar el rendimiento de aplicaciones que requieren alta eficiencia.  
+    - **Ejemplo:** `numactl --interleave=all my_application`
+
+16. **fstrim**  
+    - **Explicación:** Ejecuta comandos TRIM en dispositivos de bloques (especialmente SSD) para mantener el rendimiento y prolongar la vida útil.  
+    - **Ejemplo:** `fstrim -av`
+
+17. **hdparm**  
+    - **Explicación:** Evalúa el rendimiento y ajusta parámetros de discos duros, lo que ayuda a diagnosticar y optimizar el acceso a disco.  
+    - **Ejemplo:** `hdparm -tT /dev/sda`
+
+18. **smartctl**  
+    - **Explicación:** Utiliza la tecnología S.M.A.R.T. para verificar el estado de los discos, permitiendo detectar posibles fallas antes de que ocurran.  
+    - **Ejemplo:** `smartctl -a /dev/sda`
+
+19. **mtr**  
+    - **Explicación:** Combina traceroute y ping para ofrecer una vista interactiva y continua de la ruta de red y la latencia, útil para diagnosticar problemas de conectividad.  
+    - **Ejemplo:** `mtr -r -c 10 example.com`
+
+20. **lsusb**  
+    - **Explicación:** Lista todos los dispositivos USB conectados, facilitando la identificación y solución de problemas relacionados con hardware USB.  
+    - **Ejemplo:** `lsusb`
+
+21. **lspci**  
+    - **Explicación:** Muestra información detallada de dispositivos PCI, esencial para la resolución de problemas de drivers y hardware en servidores.  
+    - **Ejemplo:** `lspci -v`
+
+22. **sensors**  
+    - **Explicación:** Proporciona lecturas de temperaturas, voltajes y velocidades de ventilador, permitiendo vigilar la salud térmica del sistema.  
+    - **Ejemplo:** `sensors`
+
+23. **chkconfig**  
+    - **Explicación:** Administra servicios en sistemas SysV, permitiendo habilitar o deshabilitar la carga de servicios al arranque en entornos legacy.  
+    - **Ejemplo:** `chkconfig --list | grep httpd`
+
+24. **service**  
+    - **Explicación:** Gestiona servicios en sistemas basados en SysV, permitiendo iniciar, detener o reiniciar servicios de manera simple.  
+    - **Ejemplo:** `service httpd restart`
+
+25. **update-alternatives**  
+    - **Explicación:** Permite gestionar múltiples versiones de una misma aplicación (por ejemplo, Java), facilitando la conmutación entre ellas.  
+    - **Ejemplo:** `update-alternatives --config java`
+
+26. **dpkg**  
+    - **Explicación:** Gestiona paquetes en distribuciones Debian, mostrando información de versiones e instalando o removiendo software de forma granular.  
+    - **Ejemplo:** `dpkg -l | grep nginx`
+
+27. **rpm**  
+    - **Explicación:** Administra paquetes en sistemas basados en RPM, verificando la integridad y versión de los paquetes instalados.  
+    - **Ejemplo:** `rpm -qa | grep httpd`
+
+28. **gdb**  
+    - **Explicación:** Depura aplicaciones en ejecución, permitiendo inspeccionar variables, seguir la traza y analizar fallos para solucionar errores en tiempo real.  
+    - **Ejemplo:** `gdb /usr/bin/myapp core`
+
+29. **valgrind**  
+    - **Explicación:** Analiza aplicaciones para detectar fugas de memoria y otros errores de ejecución, fundamental para depurar programas en C/C++.  
+    - **Ejemplo:** `valgrind --leak-check=full ./myapp`
+
+30. **ab (ApacheBench)**  
+    - **Explicación:** Realiza pruebas de rendimiento de servidores web simulando múltiples conexiones simultáneas, ayudando a identificar cuellos de botella.  
+    - **Ejemplo:** `ab -n 1000 -c 100 http://example.com/`
+
+31. **siege**  
+    - **Explicación:** Ejecuta pruebas de carga en servidores web simulando tráfico de múltiples usuarios para evaluar la robustez del sistema.  
+    - **Ejemplo:** `siege -c 50 -t 1M http://example.com/`
+
+32. **xfs_info**  
+    - **Explicación:** Muestra detalles de la configuración y parámetros de sistemas de archivos XFS, facilitando la optimización y solución de problemas.  
+    - **Ejemplo:** `xfs_info /dev/sda1`
+
+33. **lxc-ls**  
+    - **Explicación:** Lista contenedores LXC y muestra su estado, útil para gestionar entornos de virtualización ligera en producción.  
+    - **Ejemplo:** `lxc-ls --fancy`
+
+34. **podman ps**  
+    - **Explicación:** Lista contenedores gestionados por Podman, una alternativa sin demonio a Docker, permitiendo ver su estado y detalles clave.  
+    - **Ejemplo:** `podman ps --format "table {{.ID}}\t{{.Names}}\t{{.Status}}"`
+
+35. **firewall-cmd**  
+    - **Explicación:** Gestiona el firewall firewalld en sistemas basados en RHEL, permitiendo agregar o eliminar reglas de forma dinámica.  
+    - **Ejemplo:** `firewall-cmd --zone=public --add-port=8080/tcp --permanent && firewall-cmd --reload`
+
+36. **at**  
+    - **Explicación:** Programa la ejecución única de tareas en un momento específico, útil para tareas puntuales que no requieren recurrencia.  
+    - **Ejemplo:** `echo "/usr/local/bin/maintenance.sh" | at 03:00`
+
+37. **screen**  
+    - **Explicación:** Multiplexa terminales de forma similar a tmux, permitiendo mantener sesiones persistentes y continuar procesos a través de desconexiones.  
+    - **Ejemplo:** `screen -S mysession`
+
+38. **rsyslogd**  
+    - **Explicación:** Inicia el demonio de rsyslog para gestionar y centralizar la recolección de logs del sistema, facilitando auditorías y diagnóstico.  
+    - **Ejemplo:** `rsyslogd -n`
+
+39. **logrotate**  
+    - **Explicación:** Rota, comprime y elimina logs antiguos siguiendo una configuración definida, evitando que el sistema se sature de archivos de log.  
+    - **Ejemplo:** `logrotate -vf /etc/logrotate.conf`
+
+40. **tshark**  
+    - **Explicación:** Versión en línea de comandos de Wireshark para capturar y analizar tráfico de red con filtros avanzados, ideal para análisis forense.  
+    - **Ejemplo:** `tshark -i eth0 -f "tcp port 443" -c 100 -w /tmp/tshark_capture.pcap`
+
+41. **ncdu**  
+    - **Explicación:** Herramienta interactiva para visualizar el uso de disco en directorios, permitiendo identificar rápidamente archivos o carpetas que consumen mucho espacio.  
+    - **Ejemplo:** `ncdu /var`
+
+42. **inotifywait**  
+    - **Explicación:** Monitorea eventos del sistema de archivos en tiempo real y puede usarse para disparar acciones automáticas cuando se producen cambios.  
+    - **Ejemplo:** `inotifywait -m /etc/ | grep "MODIFY"`
+
+43. **unison**  
+    - **Explicación:** Sincroniza directorios de forma bidireccional entre sistemas, asegurando la coherencia en entornos distribuidos o copias de seguridad.  
+    - **Ejemplo:** `unison /home/user/ remote://user@backupserver//home/user/ -batch`
+
+44. **zpool**  
+    - **Explicación:** Gestiona pools de almacenamiento ZFS, permitiendo crear, extender y monitorizar el estado de la integridad de los datos.  
+    - **Ejemplo:** `zpool status tank`
+
+45. **zfs**  
+    - **Explicación:** Administra sistemas de archivos ZFS, ofreciendo funcionalidades avanzadas como snapshots y replicación para respaldos seguros.  
+    - **Ejemplo:** `zfs snapshot tank/data@backup_$(date +%F)`
+
+46. **etckeeper**  
+    - **Explicación:** Versiona el contenido de /etc usando sistemas de control de versiones, facilitando el seguimiento de cambios en la configuración del sistema.  
+    - **Ejemplo:** `etckeeper commit "Actualización de configuración"`
+
+47. **dmidecode**  
+    - **Explicación:** Extrae información detallada del hardware (BIOS, memoria, CPU) a partir de la tabla DMI, útil para inventarios y diagnósticos.  
+    - **Ejemplo:** `dmidecode -t system`
+
+48. **free**  
+    - **Explicación:** Muestra la cantidad de memoria física y swap en uso y disponible, permitiendo un diagnóstico rápido del estado de los recursos.  
+    - **Ejemplo:** `free -h`
+
+49. **unzip**  
+    - **Explicación:** Extrae archivos comprimidos en formato ZIP, permitiendo la rápida implementación o verificación de paquetes de software.  
+    - **Ejemplo:** `unzip -o package.zip -d /opt/application`
+
+50. **tar**  
+    - **Explicación:** Empaqueta y comprime directorios o archivos, facilitando respaldos y despliegues a través de formatos comprimidos ampliamente aceptados.  
+    - **Ejemplo:** `tar -czvf /backup/backup_$(date +%F).tar.gz /var/www/`
+
