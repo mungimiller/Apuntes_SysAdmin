@@ -1,6 +1,4 @@
-# Comandos Avanzados de Linux para Diagnosticar Errores en la Migración de COBOL a Linux
-
-Basándonos en la información disponible sobre migraciones de COBOL (especialmente en la conversión de codificación, manejo de archivos y diferencias en el entorno) y en los errores reportados en foros y documentación, a continuación se listan 50 comandos útiles para detectar, diagnosticar y solucionar problemas durante la migración:
+# Comandos Avanzados de Linux / COBOL
 
 1. **locale**  
    - **Descripción:** Muestra la configuración regional actual, importante para detectar problemas de codificación (ASCII vs. EBCDIC, UTF-8, etc.).  
