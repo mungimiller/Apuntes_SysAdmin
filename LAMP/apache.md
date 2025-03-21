@@ -1,4 +1,4 @@
-### 30 Configuraciones Avanzadas de Apache
+### Configuraciones Avanzadas de Apache
 
 1. **Configuración de mod_security con OWASP CRS Personalizado**  
    - **Explicación:** Integra y ajusta el módulo mod_security con un conjunto de reglas OWASP CRS adaptadas para detectar y bloquear ataques complejos.  
@@ -361,7 +361,7 @@
 
 ---
 
-### 30 Comandos Avanzados de Apache en Entornos de Producción
+### Comandos Avanzados de Apache en Entornos de Producción
 
 1. **Verificar la Configuración Completa y Sintaxis de Apache**  
    - **Explicación:** Ejecuta una verificación completa de la configuración para detectar errores antes de reiniciar el servicio.  
